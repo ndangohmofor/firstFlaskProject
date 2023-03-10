@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos</title>
+</head>
+<body>
+<h1>ToDos</h1>
+{% for todo in todos %}
+    <li>{{ todo }}</li>
+{% endfor %}
+
+<form method="POST">
+    {{  template_form.hidden_tag() }}
+    <p>
+        {{ template_form.togo.label }}
+        {{ template_form.togo() }}
+    </p>
+    <p>
+        {{ template_form.submit }}
+    </p>
+</form>
+</body>
+</html>
